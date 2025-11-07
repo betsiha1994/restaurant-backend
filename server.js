@@ -16,6 +16,7 @@ const contactRoutes = require("./routes/ContactRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
 const cateringRoutes = require("./routes/cateringRoutes");
 const subscriberRoutes = require("./routes/sebscriberRoutes");
+const passwordRoutes = require("./routes/passwordRoutes");
 
 dotenv.config();
 
@@ -41,6 +42,7 @@ app.use("/api/contact", contactRoutes);
 app.use("/api/payment", paymentRoutes);
 app.use("/api/catering", cateringRoutes);
 app.use("/api/subscribers", subscriberRoutes);
+app.use("/api/auth", passwordRoutes);
 
 app.get("/", (req, res) => {
   res.send("Restaurant Ordering System API is running");
